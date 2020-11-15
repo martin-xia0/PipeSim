@@ -2,6 +2,7 @@ package com.main;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -10,12 +11,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.component.Network;
 
 @RestController
-public class WaterSimApi {
+public class PipSimApi {
 
 
 	@GetMapping("/")
-	public String index() {
-		return "Welcome to WaterSim!";
+	public String index(@RequestParam String name ) {
+		return String.format("Welcome %s to PipSim!", name);
 	}
 
 	
@@ -24,7 +25,7 @@ public class WaterSimApi {
 		final JSONObject networkObj = JSON.parseObject(networkJson);
 		final String name = networkObj.getString("name");
 		// logger.info(name);
-		Network network = new Network(networkObj);
+		// Network network = new Network(networkObj);
 		return String.format("Hello %s", name); 
 	}
 
