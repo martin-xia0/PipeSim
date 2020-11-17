@@ -15,7 +15,7 @@ public class Network
 {
 
 	
-	ArrayList {PIP1, FAMEN}
+	ArrayList {Pipe1, FAMEN}
 	HeadLoss()
 	FOR OBJ IN 
 	irrelavent to v situation
@@ -26,15 +26,15 @@ public class Network
 }
 
 
-public class Pip
+public class Pipe
 {
 	SEG1+SGE2+ 
 }
 
-public class Pipseg
+public class Pipeseg
 // 最小直管微元
 
-public class PipBend
+public class PipeBend
 // 弯头
 {
 

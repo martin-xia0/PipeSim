@@ -11,12 +11,12 @@ import com.alibaba.fastjson.JSONObject;
 import com.component.Network;
 
 @RestController
-public class PipSimApi {
+public class PipeSimApi {
 
 
 	@GetMapping("/")
 	public String index(@RequestParam String name ) {
-		return String.format("Welcome %s to PipSim!", name);
+		return String.format("Welcome %s to PipeSim!", name);
 	}
 
 	
