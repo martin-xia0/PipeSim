@@ -3,8 +3,7 @@ package com.component;
 class Network{
   
   static double GRAVITATIONAL_ACCELERATION = 9.8;
-  static double TEMPERATURE = 20;
-  static double DENSITY = 1000;
+  static int TEMPERATURE = 25;
   
   Pipe[] pipelist;
   Node[] nodelist;
