@@ -1,27 +1,17 @@
 package com.component;
 
-class Fluid {
+public class Fluid {
     
     private double quantity;
     private double velocity;
-    private double pressure;
 
     public Fluid(){
         this.quantity = -1;
         this.velocity = -1;
-        this.pressure = -1;
     }    
     public Fluid(double quantity){
         this.quantity = quantity;
-        this.velocity = 0;
-        this.pressure = 0;      
-    }
-    
-    public void setPressure(double pressure) {
-        this.pressure = pressure;
-    }
-    public double getPressure() {
-        return pressure;
+        this.velocity = -1;     
     }
     
     public void setQuantity(double quantity) {

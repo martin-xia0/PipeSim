@@ -12,6 +12,7 @@ import com.component.Network;
 
 @RestController
 public class PipeSimApi {
+	Network network = null;
 
 
 	@GetMapping("/")
@@ -21,17 +22,22 @@ public class PipeSimApi {
 
 	
 	@PostMapping("/build_network")
-	public String calHeadLose(@RequestBody final String networkJson) {
+	// build static network
+	public String buildNetwork(@RequestBody final String networkJson) {
+		// parse to map
 		final JSONObject networkObj = JSON.parseObject(networkJson);
 		final String name = networkObj.getString("name");
-		// logger.info(name);
-		// Network network = new Network(networkObj);
-		return String.format("Hello %s", name); 
+		// ??
+		network = new Network(networkObj);
+		return String.format("Finish building %s", name); 
 	}
 
-	// @GetMapping("/head_loss") 
-	// public String calHeadLose(@RequestBody String hydroJson) {
-		// v, q
-	// 	return ""; 
-	// }
+	@GetMapping("/head_loss") 
+	// input dynamic hydrualic data
+	public double calHeadLoss(@RequestBody String hydrualicJson) {
+		network.inputData();
+		// get the calculated data
+		double headLoss = network.getHeadLoss();
+		return 0;
+	}
 }
