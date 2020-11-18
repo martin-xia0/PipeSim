@@ -33,3 +33,21 @@
 ### 近期
 #### 讨论参数类，network -> 接口（json带什么参数）
 #### 催数据采集，硬件（调通没有）+软件（接口）
+
+## 11.17
+### 一些调整
+- 继承类 Node -> 管件附着物
+- component 里面都是物理对象
+- calculator -> getxxx
+- node 初始化map查询
+
+### Network 数据结构
+  - 排列顺序，假设管网就是Node和Pipe的组合，但如何描述这个组合，用哪种数据结构？
+  - ArrayList Set
+  - 管网的build，传入数据应该长啥样，如何解析json->network 
+
+
+
+### IDEA
+- 先以无序集合输入
+  再选择子集，生成顺序
