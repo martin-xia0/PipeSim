@@ -51,3 +51,28 @@
 ### IDEA
 - 先以无序集合输入
   再选择子集，生成顺序
+
+## 11.18
+### network
+- network 是 component 的集合 ArrayList
+- UserArea 是 component 的子类，纯粹吃流量不干扰压力
+
+### 如何定义分叉点
+- ArrayList network， 分叉就是branch
+- branch（纯粹吃流量不干扰压力）-> 关联到一个network_id，计算总共分出去多少水
+- Map branch_id -> network
+- Queue branch queue 存放未计算的network
+- 最终搜索完所有支路，把所有network算一遍
+  
+
+### 传入数据
+#### 管网拓扑结构
+构造整个数据结构
+环境数据
+#### 模拟状态数据
+- 用户用水量
+- 出厂水压
+
+
+### 目前问题
+- 传入数据（Json）的组织方式

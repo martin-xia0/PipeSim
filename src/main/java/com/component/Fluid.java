@@ -1,10 +1,9 @@
 package com.component;
 
-class Fluid {
+public class Fluid {
     
     private double quantity;
     private double velocity;
-    public double nu;
 
     public Fluid(){
         this.quantity = -1;
@@ -12,9 +11,8 @@ class Fluid {
     }    
     public Fluid(double quantity){
         this.quantity = quantity;
-        this.velocity = 0;     
+        this.velocity = -1;     
     }
-    
     
     public void setQuantity(double quantity) {
         this.quantity = quantity;
