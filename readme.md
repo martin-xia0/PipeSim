@@ -9,10 +9,12 @@ The main mission for PipeSim is to help water companies to make the right planni
 
 ## Functions
 ### Hydraulic simulation
+
 ### Water loss detection
 
 ## Models
 ### Hydraulic models
+
 ### Data mining models
 - space-time probabilistic model
 

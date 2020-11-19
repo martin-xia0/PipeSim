@@ -5,24 +5,26 @@ public class UserNode extends Component{
     public String type;
     public double quantityConsume;
     public double pressureNeed;
+    public String name;
+    
     public UserNode(){
         this.type = null;
-        this.id = null;
+        this.name = null;
         this.quantityConsume = -1;
         this.pressureNeed = -1;
     }
-    public UserNode(String type, String id, double quantityConsume){
+    public UserNode(String type, String name, double quantityConsume){
         this.type = type;
-        this.id = id;
+        this.name = name;
         this.quantityConsume = quantityConsume;
         this.pressureNeed = 0;
-        System.out.printf("%s UserNode %s has been built (qC = %s) %n",type, id, quantityConsume);
+        System.out.printf("%s UserNode %s has been built (qC = %s) %n",type, name, quantityConsume);
     }
-    public UserNode(String type, String id, double quantityConsume, double pressureNeed){
+    public UserNode(String type, String name, double quantityConsume, double pressureNeed){
         this.type = type;
-        this.id = id;
+        this.name = name;
         this.quantityConsume = quantityConsume;
         this.pressureNeed = pressureNeed;
-        System.out.printf("%s UserNode %s has been built (qC = %s, pN= %s) %n",type, id, quantityConsume, pressureNeed);
+        System.out.printf("%s UserNode %s has been built (qC = %s, pN= %s) %n",type, name, quantityConsume, pressureNeed);
     }
 }
