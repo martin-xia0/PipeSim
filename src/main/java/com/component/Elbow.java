@@ -1,8 +1,9 @@
 package com.component;
 
-public class Elbow extends Node{
+//管道节点——弯头，包含弯头的基本参数（材料，直径，局部水头损失系数）
+public class Elbow extends PipeNode{
     
-    static int nodeType = 1;
+    static final int nodeType = 1;
 
     public Elbow(){      
         this.material = -1;

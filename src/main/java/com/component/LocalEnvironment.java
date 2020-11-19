@@ -1,8 +1,6 @@
 package com.component;
 
-/*
-用于配置温度和当地重力加速度（以及后续可能会添加的环境相关的参数），运动粘度计算可放在这部分
-*/
+//环境配置，用于配置温度和当地重力加速度（以及后续可能会添加的环境相关的参数），运动粘度计算可放在这部分
 public class LocalEnvironment {
     private int temperature;
     private double gravitationalAcceleration;
@@ -10,6 +8,7 @@ public class LocalEnvironment {
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;
+        System.out.printf("temperture is %s %n" ,getTemperature());
     }
     public int getTemperature() {
         return temperature;
@@ -17,6 +16,7 @@ public class LocalEnvironment {
 
     public void setGravitationalAcceleration(double gravitationalAcceleration) {
         this.gravitationalAcceleration = gravitationalAcceleration;
+        System.out.printf("gravitationalAcceleration is %s %n" ,getGravitationalAcceleration());
     }
     public double getGravitationalAcceleration() {
         return gravitationalAcceleration;

@@ -3,13 +3,9 @@ package com.component;
 import java.util.*;
 
 
-//暂时没有想好
+//暂时没有想好，管网应当包含所有内容
 public class Network{
   List<Component> network = new ArrayList<Component>();
-  
-  
-  Pipe[] pipelist;
-  Node[] nodelist;
 
   public Network(){
     // parse 

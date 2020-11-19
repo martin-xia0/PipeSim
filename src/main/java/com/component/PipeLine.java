@@ -1,18 +1,19 @@
 package com.component;
 
-public class Pipe{
+//直管段，包含直管段的各项物理属性（材质，直径，长度，绝对粗糙度）
+public class PipeLine extends Component {
     int material;
     double diameter;
 	double length;
 	double delta = calDelta(material);
 	
-	public Pipe(){
+	public PipeLine(){
     	this.material = 1;
       	this.diameter = 0.2;
       	this.length = 1000;     
       	System.out.printf("defult pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
     }
-    public Pipe(int material, double diameter, double length){      
+    public PipeLine(int material, double diameter, double length){      
       	this.material = material;
       	this.diameter = diameter;
       	this.length = length;

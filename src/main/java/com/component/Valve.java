@@ -1,8 +1,9 @@
 package com.component;
 
-public class Valve extends Node{
+//管道节点——阀门，包含阀门的基本参数（材料，直径，局部水头损失系数）
+public class Valve extends PipeNode{
     
-    static int nodeType = 2;
+    static final int nodeType = 2;
 
     public Valve(){ 
         this.material = -1;
@@ -15,7 +16,8 @@ public class Valve extends Node{
         this.diameter = diameter;
         this.zeta = calZeta(material, diameter);
         System.out.printf("Valve has been built (material=%s, diameter=%s) %n", material, diameter);
-    }
+    }     
+    
     public static double calZeta(int material, double diameter){        
         double zeta = -1;
         int diameter_mm = (int)(diameter*1000); 
@@ -35,6 +37,7 @@ public class Valve extends Node{
                 case 400:	zeta = 0.08;	break;
                 default:	break;
             }
-        }return zeta;      
+        }
+        return zeta;      
     }
 }
