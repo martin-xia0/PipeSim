@@ -1,13 +1,25 @@
 package com.component;
 
+import java.util.*;
+
+
 //暂时没有想好
 public class Network{
+  List<Component> network = new ArrayList<Component>();
+  
+  
   Pipe[] pipelist;
   Node[] nodelist;
 
   public Network(){
+    // parse 
+    for (Component c: ??){
+      network.add(c);
+    }
     System.out.printf("please add pipes and nodes %n");
   }
+  // 从头到尾
+  // 分叉？？
 
   public Network(Pipe[] pipelist){
     this.pipelist = pipelist;
@@ -23,9 +35,18 @@ public class Network{
     System.out.printf("Network with %s pipes and %s nodes has been built %n", pipelist.length, pipelist.length);
   }
 
+  public double getQuantity() {
+    //  water use in all UserAreas
 
-  public double getHeadLoss() {
-    return 0.0;
+  }
+
+
+  public double getHeadLoss() {    
+    double totalHeadLoss;
+    for (Component c: network) {
+      // totalHeadLoss += c.getHeadLoss();
+    }
+    return totalHeadLoss;
   }
 
   public void inputData(){

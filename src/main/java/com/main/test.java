@@ -1,15 +1,7 @@
 package com.main;
 
-//环境
-import com.component.LocalEnvironment;
-//管件
-import com.component.Pipe;
-import com.component.Valve;
-import com.component.Elbow;
-//流体
-import com.component.Fluid;
-//管网模型
-import com.component.Network;
+import com.component.*;
+
 
 public class test {
     public static void main(String[] args) {
