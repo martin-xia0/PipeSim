@@ -1,6 +1,6 @@
 package com.component;
 
-public class TJunction extends Component{ 
+public class BranchPoint extends Component{ 
     public static Integer ID;
     public static Integer branchID;
     public static Double totalLength;

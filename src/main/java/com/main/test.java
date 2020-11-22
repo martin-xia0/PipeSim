@@ -25,7 +25,6 @@ public class test {
         Elbow elbow2 = new Elbow(2,0.3);
         //流体建立（待商榷）
         System.out.println("----------流体建立（待商榷）---------");
-        Fluid model1 = new Fluid(0.3);
         //用水节点建立
         System.out.println("------------用水节点建立-------------");
         UserNode userNode1 = new UserNode("family","zhangsan",0.15);
