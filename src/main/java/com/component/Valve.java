@@ -5,18 +5,25 @@ public class Valve extends PipeNode{
     
     static final int nodeType = 2;
 
-    public Valve(){ 
-        this.material = -1;
-        this.diameter = -1;
-        this.zeta = -1; 
-        System.out.printf("defult Valve has been built (material=%s, diameter=%s) %n", material, diameter);
+    // public Valve(){ 
+    //     this.material = -1;
+    //     this.diameter = -1;
+    //     this.zeta = -1; 
+    //     System.out.printf("defult Valve has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }
+    // public Valve(int material, double diameter){  
+    //     this.material = material;
+    //     this.diameter = diameter;
+    //     this.zeta = calZeta(material, diameter);
+    //     System.out.printf("Valve has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }     
+    public void setZeta() {
+        this.zeta = calZeta(this.material, this.diameter);
     }
-    public Valve(int material, double diameter){  
-        this.material = material;
-        this.diameter = diameter;
-        this.zeta = calZeta(material, diameter);
-        System.out.printf("Valve has been built (material=%s, diameter=%s) %n", material, diameter);
-    }     
+    
+    public double getZeta() {
+        return zeta;
+    }   
     
     public static double calZeta(int material, double diameter){        
         double zeta = -1;

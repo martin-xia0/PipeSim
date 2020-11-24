@@ -19,4 +19,3 @@ To simulate the network pressure distribution, first, you need to import the pip
 Hydraulic models mainly depend on modern fluid mechanics theory.The frictional head loss is mainly calculated in two ways which can be selected -- the more accurate one, Darcy-Weisbach Formula and the more convenient one, Hazen-Wllliams Formula. The local headloss can also be calculated accurately by using the experimental coefficient table or just take it appoximately 8%-12% of the total frictional head loss.
 ### Data mining models
 - space-time probabilistic model
-

@@ -7,18 +7,18 @@ public class PipeLine extends Component {
 	double length;
 	double delta = calDelta(material);
 	
-	public PipeLine(){
-    	this.material = 1;
-      	this.diameter = 0.2;
-      	this.length = 1000;     
-      	System.out.printf("defult pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
-    }
-    public PipeLine(int material, double diameter, double length){      
-      	this.material = material;
-      	this.diameter = diameter;
-      	this.length = length;
-      	System.out.printf("pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
-	}
+	// public PipeLine(){
+    // 	this.material = 1;
+    //   	this.diameter = 0.2;
+    //   	this.length = 1000;     
+    //   	System.out.printf("defult pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
+    // }
+    // public PipeLine(int material, double diameter, double length){      
+    //   	this.material = material;
+    //   	this.diameter = diameter;
+    //   	this.length = length;
+    //   	System.out.printf("pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
+	// }
 	
 	public double calDelta(int material){
 		double delta = -1;
@@ -30,6 +30,30 @@ public class PipeLine extends Component {
 			case 5: delta = 0.000200;	break;//旧钢铁
 			case 6:	delta = 0.000200;	break;//水泥
 		}
+		return delta;
+	}
+	public void setMaterial(int material) {
+		this.material = material;
+	}
+	public int getMaterial() {
+		return material;
+	}
+	public void setDiameter(double diameter) {
+		this.diameter = diameter;
+	}
+	public double getDiameter() {
+		return diameter;
+	}
+	public void setLength(double length) {
+		this.length = length;
+	}
+	public double getLength() {
+		return length;
+	}
+	public void setDelta() {
+		this.delta = calDelta(this.material);
+	}
+	public double getDelta() {
 		return delta;
 	}
 }

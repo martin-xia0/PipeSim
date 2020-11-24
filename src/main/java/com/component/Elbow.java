@@ -5,19 +5,26 @@ public class Elbow extends PipeNode{
     
     static final int nodeType = 1;
 
-    public Elbow(){      
-        this.material = -1;
-        this.diameter = -1;
-        this.zeta = -1;
-        System.out.printf("defult Elbow has been built (material=%s, diameter=%s) %n", material, diameter);
-    }
-    public Elbow(int material, double diameter){     
-        this.material = material;
-        this.diameter = diameter;
-        this.zeta = calZeta(material, diameter);
-        System.out.printf("Elbow has been built (material=%s, diameter=%s) %n", material, diameter);
-    }
+    // public Elbow(){      
+    //     this.material = -1;
+    //     this.diameter = -1;
+    //     this.zeta = -1;
+    //     System.out.printf("defult Elbow has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }
+    // public Elbow(int material, double diameter){     
+    //     this.material = material;
+    //     this.diameter = diameter;
+    //     this.zeta = calZeta(material, diameter);
+    //     System.out.printf("Elbow has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }
+    public void setZeta() {
+        this.zeta = calZeta(this.material, this.diameter);
+      }
     
+    public double getZeta() {
+        return zeta;
+      }   
+         
     public static double calZeta(int material, double diameter){
         int diameter_mm = (int)(diameter*1000);
         double zeta = -1;  

@@ -3,19 +3,27 @@ package com.component;
 public class TriJunction extends PipeNode{
     static final int nodeType = 3;
 
-    public TriJunction(){ 
-        this.material = -1;
-        this.diameter = -1;
-        this.zeta = -1; 
-        System.out.printf("defult Tjunction has been built (material=%s, diameter=%s) %n", material, diameter);
+    // public TriJunction(){ 
+    //     this.material = -1;
+    //     this.diameter = -1;
+    //     this.zeta = -1; 
+    //     System.out.printf("defult Tjunction has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }
+    // public TriJunction(int material, double diameter){  
+    //     this.material = material;
+    //     this.diameter = diameter;
+    //     this.zeta = calZeta(material, diameter);
+    //     System.out.printf("Tjunction has been built (material=%s, diameter=%s) %n", material, diameter);
+    // }  
+
+    public void setZeta() {
+        this.zeta = calZeta(this.material, this.diameter);
     }
-    public TriJunction(int material, double diameter){  
-        this.material = material;
-        this.diameter = diameter;
-        this.zeta = calZeta(material, diameter);
-        System.out.printf("Tjunction has been built (material=%s, diameter=%s) %n", material, diameter);
-    }     
     
+    public double getZeta() {
+        return zeta;
+    }   
+
     public static double calZeta(int material, double diameter){        
         double zeta = -1;
         int diameter_mm = (int)(diameter*1000); 

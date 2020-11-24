@@ -16,4 +16,12 @@ public class Branch extends Component{
             this.branch.add(pipelist[i]);
         }
     }
+    public void setMainBranch(boolean mainBranch) {
+        this.mainBranch = mainBranch;
+    }
+    public void setBranch(Component[] pipelist) {
+        for(int i = 0; i < pipelist.length; i++){
+            this.branch.add(pipelist[i]);
+        }
+    }
 }
