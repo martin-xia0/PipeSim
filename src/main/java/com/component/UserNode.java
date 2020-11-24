@@ -2,16 +2,17 @@ package com.component;
 
 //用水节点，包含用水节点基本参数（类型，名称，流量消耗，压力需求）
 public class UserNode extends Component{
-    public String type;
+    public String userType;
     public double reqQuantity;
     public double reqPressure;
     
-    // public UserNode(){
-    //     this.type = null;
-    //     this.name = null;
-    //     this.reqQuantity = -1;
-    //     this.reqPressure = -1;
-    // }
+    public UserNode(){
+        this.userType = null;
+        this.name = null;
+        this.reqQuantity = -1;
+        this.reqPressure = -1;
+        setGeneralType(3);
+    }
     // public UserNode(String type, String name, double reqQuantity){
     //     this.type = type;
     //     this.name = name;
@@ -26,11 +27,11 @@ public class UserNode extends Component{
     //     this.reqPressure = reqPressure;
     //     System.out.printf("%s UserNode %s has been built (qC = %s, pN= %s) %n",type, name, reqQuantity, reqPressure);
     // }
-    public void setType(String type) {
-        this.type = type;
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
-    public String getType() {
-        return type;
+    public String getUserType() {
+        return userType;
     }
 
     public void setReqQuantity(double reqQuantity) {

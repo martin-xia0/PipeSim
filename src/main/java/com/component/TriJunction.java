@@ -1,14 +1,13 @@
 package com.component;
 
 public class TriJunction extends PipeNode{
-    static final int nodeType = 3;
 
-    // public TriJunction(){ 
-    //     this.material = -1;
-    //     this.diameter = -1;
-    //     this.zeta = -1; 
-    //     System.out.printf("defult Tjunction has been built (material=%s, diameter=%s) %n", material, diameter);
-    // }
+    public TriJunction(){ 
+        this.material = -1;
+        this.diameter = -1;
+        this.zeta = -1; 
+        setPipeNodeType(3);
+    }
     // public TriJunction(int material, double diameter){  
     //     this.material = material;
     //     this.diameter = diameter;

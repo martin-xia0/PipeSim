@@ -7,7 +7,15 @@ public class PipeNode extends Component {
   public int material;
   public double diameter;
   public double zeta;
+  public int pipeNodeType;
   
+  public PipeNode(){
+    material = -1;
+    diameter = -1;
+    zeta = -1;
+    setGeneralType(2);
+  }
+
   public void setMaterial(int material) {
     this.material = material;
   }
@@ -20,5 +28,11 @@ public class PipeNode extends Component {
   }
   public double getDiameter() {
     return diameter;
+  }
+  public void setPipeNodeType(int pipeNodeType) {
+    this.pipeNodeType = pipeNodeType;
+  }
+  public int getPipeNodeType() {
+    return pipeNodeType;
   }
 }

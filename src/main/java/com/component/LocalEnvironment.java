@@ -6,6 +6,12 @@ public class LocalEnvironment extends Component{
     public double gravitationalAcceleration;
     public double wateKinematicViscosity;
 
+    public LocalEnvironment(){
+        temperature = -1;
+        gravitationalAcceleration = -1;
+        wateKinematicViscosity = -1;
+        setGeneralType(0);
+    }
     public void setTemperature(int temperature) {
         this.temperature = temperature;
         //System.out.printf("温度为%s摄氏度 %n" ,getTemperature());

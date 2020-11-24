@@ -7,18 +7,12 @@ public class PipeLine extends Component {
 	double length;
 	double delta = calDelta(material);
 	
-	// public PipeLine(){
-    // 	this.material = 1;
-    //   	this.diameter = 0.2;
-    //   	this.length = 1000;     
-    //   	System.out.printf("defult pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
-    // }
-    // public PipeLine(int material, double diameter, double length){      
-    //   	this.material = material;
-    //   	this.diameter = diameter;
-    //   	this.length = length;
-    //   	System.out.printf("pipe has been built (material=%s, diameter=%s, length=%s) %n",material, diameter, length);
-	// }
+	public PipeLine(){
+    	this.material = -1;
+      	this.diameter = -1;
+		this.length = -1;     
+		setGeneralType(1);
+	}
 	
 	public double calDelta(int material){
 		double delta = -1;

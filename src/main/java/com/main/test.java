@@ -141,9 +141,74 @@ public class test {
         }
         System.out.println("三通建立完成");
         //用水节点建立
-        System.out.println("------------用水节点建立--------------");
+        UserNode[] userNodes = new UserNode[10];
+        for(int i = 0; i < 5; i++){
+            userNodes[i] = new UserNode();
+            userNodes[i].setId(i);
+            userNodes[i].setUserType("普通居民");
+        }
+        for(int i = 5; i < 6; i++){
+            userNodes[i] = new UserNode();
+            userNodes[i].setId(i);
+            userNodes[i].setUserType("居民小区");
+        }
+        for(int i = 6; i < 8; i++){
+            userNodes[i] = new UserNode();
+            userNodes[i].setId(i);
+            userNodes[i].setUserType("商业用水点");
+        }
+        for(int i = 8; i < 10; i++){
+            userNodes[i] = new UserNode();
+            userNodes[i].setId(i);
+            userNodes[i].setUserType("学校");
+        }
+        userNodes[0].setName("赵日天");
+        userNodes[0].setReqQuantity(2);
+        userNodes[1].setName("李杀神");
+        userNodes[1].setReqQuantity(2);
+        userNodes[2].setName("张伟");
+        userNodes[2].setReqQuantity(2);
+        userNodes[3].setName("王诛魔");
+        userNodes[3].setReqQuantity(2);
+        userNodes[4].setName("刘斩仙");
+        userNodes[4].setReqQuantity(2);
+        
+        userNodes[5].setName("狼牙小区");
+        userNodes[5].setReqQuantity(10);
+        userNodes[6].setName("狼牙超市");
+        userNodes[6].setReqQuantity(10);
+        userNodes[7].setName("金拱门");
+        userNodes[7].setReqQuantity(10);
+        
+        userNodes[8].setName("断罪小学");
+        userNodes[8].setReqQuantity(15);
+        userNodes[9].setName("断罪小学附属大学");
+        userNodes[9].setReqQuantity(15);
+        
+        System.out.println("用水节点建立完成");
         //用水区域建立
-        System.out.println("------------用水区域建立--------------");
+        UserArea userArea1 = new UserArea();
+        userArea1.setUserAreaList(new UserNode[]{userNodes[0],userNodes[1],userNodes[2],userNodes[3],userNodes[4]});
+        userArea1.setId(1);
+        userArea1.setName("飞虎村");
+        userArea1.setUserAreaMap();
+        UserArea userArea2 = new UserArea();
+        userArea2.setUserAreaList(new UserNode[]{userNodes[5],userNodes[6],userNodes[7]});
+        userArea2.setId(2);
+        userArea2.setName("狼牙街道");
+        userArea2.setUserAreaMap();
+        UserArea userArea3 = new UserArea();
+        userArea3.setUserAreaList(new UserNode[]{userNodes[8],userNodes[9]});
+        userArea3.setId(3);
+        userArea3.setName("大学城");
+        userArea3.setUserAreaMap();
+
+        System.out.printf("赵日天每小时用%s吨水%n",userArea1.userAreaMap.get("赵日天").getReqQuantity());
+        //管道分支创建
+
+        //管网分支点创建
+        
+        System.out.println("用水区域建立完成");
         System.out.println("work finished");
         System.out.println("=====================================");
     }

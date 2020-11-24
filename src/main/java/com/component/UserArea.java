@@ -35,18 +35,18 @@ public class UserArea extends UserNode{
     public void setreqQuantity() {
         this.reqQuantity = 0;
         for(int i = 0; i < this.userAreaList.size(); i++){        
-            this.reqQuantity += userAreaList.get(i).reqQuantity;
+            this.reqQuantity += this.userAreaList.get(i).reqQuantity;
         }
     }
     public void setreqPressure() {
         this.reqPressure = 0;
         for(int i = 0; i < this.userAreaList.size(); i++){        
-            this.reqPressure += userAreaList.get(i).reqPressure;
+            this.reqPressure += this.userAreaList.get(i).reqPressure;
         }
     }
     public void setUserAreaMap() {
         for(int i = 0; i < this.userAreaList.size(); i++){        
-            this.userAreaMap.put(userAreaList.get(i).name, userAreaList.get(i));
+            this.userAreaMap.put(this.userAreaList.get(i).name, this.userAreaList.get(i));
         }
     }
 }

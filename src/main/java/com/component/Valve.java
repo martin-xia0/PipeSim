@@ -3,14 +3,12 @@ package com.component;
 //管道节点——阀门，包含阀门的基本参数（材料，直径，局部水头损失系数）
 public class Valve extends PipeNode{
     
-    static final int nodeType = 2;
-
-    // public Valve(){ 
-    //     this.material = -1;
-    //     this.diameter = -1;
-    //     this.zeta = -1; 
-    //     System.out.printf("defult Valve has been built (material=%s, diameter=%s) %n", material, diameter);
-    // }
+    public Valve(){ 
+        this.material = -1;
+        this.diameter = -1;
+        this.zeta = -1; 
+        setPipeNodeType(2);
+    }
     // public Valve(int material, double diameter){  
     //     this.material = material;
     //     this.diameter = diameter;

@@ -9,13 +9,14 @@ public class Branch extends Component{
     public Branch(){
         mainBranch = false;
         branch = null;
+        setGeneralType(4);
     }
-    public Branch(boolean mainBranch, Component[] pipelist){
-        this.mainBranch = mainBranch;
-        for(int i = 0; i < pipelist.length; i++){
-            this.branch.add(pipelist[i]);
-        }
-    }
+    // public Branch(boolean mainBranch, Component[] pipelist){
+    //     this.mainBranch = mainBranch;
+    //     for(int i = 0; i < pipelist.length; i++){
+    //         this.branch.add(pipelist[i]);
+    //     }
+    // }
     public void setMainBranch(boolean mainBranch) {
         this.mainBranch = mainBranch;
     }
